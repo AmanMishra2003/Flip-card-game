@@ -50,6 +50,8 @@ document.addEventListener('DOMContentLoaded',()=>{
         }
     ]
 
+    cardArray.sort(() => 0.5 - Math.random())
+
     const display = document.querySelector('.grid')
     const result = document.querySelector('.score')
     const attempts = document.querySelector('.attempts')
@@ -96,6 +98,9 @@ document.addEventListener('DOMContentLoaded',()=>{
         console.log(WinningScore)
         result.textContent = WinningScore
         attempts.textContent = Attempts
+        if(WinningScore===(cardArray.length)/2){
+            alert('Congratulation!! You won the game')
+        }
 
     }
 
