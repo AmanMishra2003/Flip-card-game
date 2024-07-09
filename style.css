@@ -3,7 +3,6 @@
 }
 body{
     background: #071952;
-
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
@@ -25,7 +24,7 @@ body{
 .grid{
     display: grid;
     gap: 5px;
-    width: 40vw;
+    width: calc(100vw - 20px);
     grid-template-columns: repeat(4,1fr);
     border: 2px solid #37B7C3;
     border-radius: 10px;
@@ -40,3 +39,14 @@ img{
     width: 100%;
 }
 
+@media only screen and (min-width: 400px) {
+    .grid{
+        width: calc(100vw - 40px);
+    }
+  }
+
+@media only screen and (min-width: 900px) {
+    .grid{
+        width: calc(60vw - 100px);
+    }
+  }
